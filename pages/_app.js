@@ -1,5 +1,6 @@
 import * as React from 'react';
 import '../styles/globals.css'
+import "animate.css/animate.min.css";
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { ThemeProvider } from '@mui/material/styles';
