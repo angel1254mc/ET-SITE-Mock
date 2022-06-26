@@ -18,3 +18,167 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutAndIn {
+  0% {
+    opacity: 1;
+    
+  }
+  40%,60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1
+  }
+}
+@keyframes moveDownAndUp {
+  0% {
+    transform: translateY(0);
+    
+  }
+  40%,60% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform:translateY(0%);
+  }
+}
+@keyframes fadeOutFirst {
+  0% {
+  height: auto;
+  transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+}
+@keyframes fadeInSecond {
+ 0% {
+  height: auto;
+  opacity: 0;
+  transform: translateY(10%);
+ }
+ 100% {
+ opacity: 1;
+ height: auto;
+ transform: translateY(0%);
+ }
+}
+.random-animation-class {
+  transition: 1s;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+.fade-out-and-in {
+  transition: 1s;
+  opacity: 0;
+  animation-name: fadeOutAndIn;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  }
+  .fade-out-and-in:nth-child(1) {
+  transition: 1s;
+  animation-name: moveDownAndUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  }
+
+  .fade-out-first {
+    transition: 1s;
+    overflow-y: hidden;
+    animation-name: fadeOutFirst;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+  }
+  .fade-in-second {
+    opacity: 0;
+    height: 0;
+    transition: 1s;
+    overflow-y: hidden;
+    animation-name: fadeInSecond;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+  }
+  .not-visible {
+    height: 0;
+  }
+
+  .tab-button::after {
+    content: '';
+    text-decoration: underline;
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 0.2rem;
+	  background-color: #008080;
+	  opacity: 0;
+	  transition: opacity 300ms, transform 300ms;
+  }
+  .tab-button {
+    overflow:hidden;
+    position: relative;
+  }
+  .tab-button::after {
+    opacity: 0;
+	  transform: translate3d(-100%, 0, 0);
+  }
+  .tab-button.selected::after, .tab-button.selected:after {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .et-button {
+    @apply text-white border-2 px-[25px] py-[10px] rounded-[50px] text-base;
+    transition: 0.5s;
+  }
+  .et-button.primary {
+    @apply bg-et-teal text-white border-black font-bold hover:bg-white focus:bg-white hover:text-black
+  }
+  .et-button.secondary {
+    @apply bg-black text-white border-white font-bold hover:bg-et-teal focus:bg-et-teal hover:border-black focus:border-black
+  }
+
+  .swiper {
+  width: 100vw;
+  height: 80vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  width:auto;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

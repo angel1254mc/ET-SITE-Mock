@@ -1,9 +1,15 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import TabComponent from '../components/TabComponent';
+import CardCarousel from '../components/CardCarousel';
+import homeData from '../src/data.js';
 
 export default function Home() {
+
+  const tabs = homeData.AboutUs.Tabs ;
+  
   return (
     <div className>
       <Head>
@@ -19,28 +25,99 @@ export default function Home() {
               type="video/mp4"/>
             </video>
             <div className="relative flex flex-col w-full h-full overflow-hidden">
-              <AnimationOnScroll animateIn="animate__fadeIn" initiallyVisible="false" offset={0}>
               <div id="logo+nav" className="px-6 py-2 flex justify-between items-center">
                 <Image src="/ETPNGWhite.webp" width="150px" height="80px"></Image>
                 <Image src="/burger.png" width="20px" height="20px" layout="fixed"></Image>
 
               </div>
-              </AnimationOnScroll>
               <div className="px-6 text-5xl font-bold text-white w-6/7 mt-[80px] text">Next Level IT and End-User Security</div>
               <div className="px-6 text-md font-light text-white w-5/6 mt-[25px]">We are a client-focused, standards-based, end-to-end IT consulting company providing the services and skills to secure IT infrastructures and networks critical to our nation's security</div>
+              <div className="flex flex-row mt-20 px-6 space-x-4">
+                <button className="et-button primary">START NOW</button>
+                <button className="et-button secondary">CAREERS</button>
+              </div>
             </div>
           </div>  
-          <div id="about-us-content" className="px-8 mt-40 w-full bg-gray-100 py-6 overflow-x-hidden flex flex-col items-center">
-            <Image src="/AboutUs.webp" width="370" height="370vw" layout="fixed"></Image>
+          <div id="about-us-content" className="px-6 mt-20 w-full bg-et-clay py-6 overflow-x-hidden flex flex-col items-center">
+            <AnimationOnScroll animateIn="animate__fadeInUp" offset="150" animateOnce="true">
+            <Image src="/AboutUs.webp" width="320vw" height="320vw" layout="fixed"></Image>
+            </AnimationOnScroll>
             <div className=" w-full mt-5">
               <p className="text-2xl font-bold text-left">About Us</p>
-              <div className="text-md text-gray-500s mt-4 text-justify tracking-tighter">
+              <div className="text-sm font-medium text-et-dark-gray mt-4 text-left tracking-tightest">
                 We are proud to be disruptive consultants. We don’t waste our time with traditional corporate politics – we prioritize employee voices, collaboration, and climate. We understand the importance of workplace culture and a sense of belonging and purpose.
                 <br/>
                 <br/>
-                We serve as Solution Experts to ensure our clients’ systems are secure, efficient, and compliant.</div>
+                We serve as Solution Experts to ensure our clients’ systems are secure, efficient, and compliant.
+              </div>
+              <TabComponent Tabs={tabs}></TabComponent>
             </div>
           </div>
+          <div id="our-people-content" className="px-6 mt-20 w-full bg-white py-6 overflow-x-hidden flex flex-col items-center justify-center">
+            <h4 className="text-et-teal w-full font-bold text-sm">OUR PEOPLE</h4>
+            <div className="w-full mt-3">
+              <p className="text-2xl font-bold text-left">Less than 100 employees, over 30 languages spoken.</p>
+              <p className="text-sm font-medium text-et-dark-gray mt-4 tracking-wider">
+                The Emerging Tech family combines varied industries, degree programs, 
+                universities, and backgrounds into cross-functional and developed teams 
+                with focus and purpose. Our diverse backgrounds, talents, and perspectives 
+                are foundational to our success
+              </p>
+              <div id="where-we-work-image" className="w-full flex justify-center mt-6">
+                <Image src="/WhereWeWork.webp" width="370vw" height="480vw"></Image>
+              </div>
+              <h3 className="mt-2 font-bold text-xl text-left">Degrees: </h3>
+              <div className="mt-6 flex flex-row w-full font-bold">
+                <div className="w-1/2 text-sm text-bold text-et-dark-gray ">
+                  <ul className="space-y-3">
+                    <li className="flex items-center">
+                      <Image className="" src="/listicon.webp" width="12px" height="12px"/>
+                      <p className="ml-1">Business</p>
+                    </li>
+                    <li className="flex items-center">
+                      <Image className="" src="/listicon.webp" width="12px" height="12px"/>
+                      <p className="ml-1">Health Informatics</p>
+                    </li>
+                    <li className="flex items-center">
+                      <Image className="" src="/listicon.webp" width="12px" height="12px"/>
+                      <p className="ml-1">Business</p>
+                    </li>
+                    <li className="flex items-center">
+                      <Image className="" src="/listicon.webp" width="12px" height="12px"/>
+                      <p className="ml-1">Cybersecurity</p>
+                    </li>
+                  </ul>
+                </div>
+                <div className="w-1/2 text-sm text-bold text-et-dark-gray ">
+                  <ul className="space-y-3">
+                    <li className="flex items-center">
+                      <Image className="" src="/listicon.webp" width="12px" height="12px"/>
+                      <p className="ml-1">Engineering</p>
+                    </li>
+                    <li className="flex items-center">
+                      <Image className="" src="/listicon.webp" width="12px" height="12px"/>
+                      <p className="ml-1">Communications</p>
+                    </li>
+                    <li className="flex items-center">
+                      <Image className="" src="/listicon.webp" width="12px" height="12px"/>
+                      <p className="ml-1">Mathematics</p>
+                    </li>
+                    <li className="flex items-center">
+                      <Image className="" src="/listicon.webp" width="12px" height="12px"/>
+                      <p className="ml-1">Medicine</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section id="centers-of-excellence-content" className="px-6 mt-10 w-full bg-white py-6 overflow-x-hidden flex flex-col items-center justify-center">
+            <div className="text-sm text-center text-et-teal font-bold py-2">EMERGING TECH'S CENTERS OF EXCELLENCE</div>
+            <div className="text-2xl text-center text-black font-bold tracking-wide">Our Capabilities</div>
+            <div className="carousel-holder">
+              <CardCarousel></CardCarousel>
+            </div>
+          </section>
       </main>
 
       <footer>
