@@ -42,7 +42,7 @@ export default function Home() {
               <div className="w-[100vw] mt-[96px] xl:mt-[132px] flex justify-center">
                 <div className="animate__delay-1s animate__animated animate__fadeInUp lg:w-5/6 xl:w-3/4">
                   <div className="px-6 text-4xl sm:text-6xl md:text-6xl lg:text-7xl font-bold text-white w-6/7 md:w-4/5 lg:px-14 lg:w-[584px] mt-[80px]">Next Level IT and End-User Security</div>
-                  <div className="px-6 text-md sm:text-xl md:text-3xl lg:text-xl font-normal text-white w-5/6l lg:pl-14 lg:w-[460px] mt-[25px]">We are a client-focused, standards-based, end-to-end IT consulting company providing the services and skills to secure IT infrastructures and networks critical to our nation's security</div>
+                  <div className="px-6 text-md sm:text-xl md:text-3xl lg:text-xl font-normal text-white w-5/6l lg:pl-14 lg:w-[460px] mt-[25px]">We are a client-focused, standards-based, end-to-end IT consulting company providing the services and skills to secure IT infrastructures and networks critical to our nation&apos;s security</div>
                   <div className="flex flex-row mt-20 md:mt-16 px-6 space-x-4">
                     <button className="et-button primary md:text-xl md:w-[200px] md:h-[50px] lg:ml-4">START NOW</button>
                     <button className="et-button secondary md:text-xl md:w-[180px] md:h-[50px]">CAREERS</button>
@@ -198,7 +198,7 @@ export default function Home() {
               </div>
             </div>
             <section id="centers-of-excellence-content" className="px-6 mt-10 w-full bg-white py-6 overflow-x-hidden flex flex-col items-center justify-center">
-              <div className="text-sm lg:text-xl text-center text-et-teal font-bold py-2">EMERGING TECH'S CENTERS OF EXCELLENCE</div>
+              <div className="text-sm lg:text-xl text-center text-et-teal font-bold py-2">EMERGING TECH&apos;S CENTERS OF EXCELLENCE</div>
               <div className="text-2xl lg:text-5xl text-center text-black font-bold tracking-wide">Our Capabilities</div>
               <div className="w-full">
                 <CardCarousel></CardCarousel>
