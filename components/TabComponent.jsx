@@ -17,8 +17,8 @@ const TabComponent = (
     }
 
   return (
-    <div className="w-full flex flex-col mt-8">
-      <div className="tab-headers w-full flex items-left space-x-4 text-black font-2xl font-bold">
+    <div className="w-full flex flex-col mt-8 sm:mt-4 sm:px-4">
+      <div className="tab-headers w-full flex items-left space-x-4 text-black text-md lg:text-xl font-bold">
         {
           Tabs.map((tab, index) => {
             return (index === tabIndexClicked ? (<button className="tab-button selected" type="button" onClick={() => {handleTabClick(index)}} id={`tabtitle-${index}`} key = {index}>{tab.title}</button>)

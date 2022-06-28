@@ -1,3 +1,64 @@
+const headerData = [
+    {
+        name: "HOME",
+        href: "/",
+    },
+        
+    {
+        name: "CENTER OF EXCELLENCE",
+        href: "/",
+        hasDropdown: true,
+        dropdown: [
+            {
+                name: "Innovation",
+                href: "/",
+                hasDropdown: false,
+            },
+            {
+                name: "Mobile",
+                href: "/",
+                hasDropdown: false,
+            },
+            {
+                name: "Healthcare",
+                href: "/",
+                hasDropdown: false,
+            },
+            {
+                name: "Testing",
+                href: "/",
+                hasDropdown: false,
+            },
+            {
+                name: "Cybersecurity",
+                href: "/",
+                hasDropdown: false,
+            },
+            {
+                name: "Systems of Systems Engineering",
+                href: "/",
+                hasDropdown: false,
+            },
+            {
+                name: "Business",
+                href: "/",
+                hasDropdown: false,
+            },
+        ]
+    },
+    
+    {
+        name: "ABOUT US",
+        href: "/",
+    },
+    
+    {
+        name: "CAREERS",
+        href: "/",
+    },
+    
+
+]
 const homeData = {
     AboutUs: {
         Tabs: [
@@ -60,4 +121,4 @@ const homeData = {
     }
     
 }
-export default homeData
+export {homeData, headerData}
