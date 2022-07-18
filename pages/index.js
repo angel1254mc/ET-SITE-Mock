@@ -33,10 +33,9 @@ export default function Home() {
 
       <main className="flex flex-col justify-center items-center">
           <div id="Hero" className="relative w-full h-[90vh] overflow-hidden">
-            <video playsInline autoPlay muted loop className = "absolute object-cover w-full h-full">
-              <source src="/videos/video_trim.mp4"
-              type="video/mp4"/>
-            </video>
+              <video autoPlay muted loop allowFullScreen className="absolute object-cover h-full w-auto md:w-full">
+                <source src="//emergingtech.co/wp-content/uploads/2022/07/video_Trim.mp4" type="video/mp4"></source>
+              </video>
             <div className="relative flex flex-col h-full overflow-hidden">
               <Header></Header>
               <div className="w-[100vw] mt-[96px] xl:mt-[10vh] flex justify-center">
