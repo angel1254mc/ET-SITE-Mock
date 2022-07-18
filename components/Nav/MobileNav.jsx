@@ -42,7 +42,7 @@ function MobileNav() {
   
   
     return (
-        <div id="sm-nav-wrapper absolute xl:hidden">
+        <div id="sm-nav-wrapper w-[100vw] absolute xl:hidden">
         <InView as="div" onChange={(inView) => {turnSticky(inView, 'sm')}} className="w-full flex lg:flex-col items-center px-4">
             <div id="scroll-detector-div h-[10px]"></div>
         </InView>

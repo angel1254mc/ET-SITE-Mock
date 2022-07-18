@@ -253,3 +253,9 @@ body {
   -ms-transition:all 0.5s ease;
   -o-transition:all 0.5s ease;
 }
+
+@media only screen and (max-height: 769) {
+  .text-4xl {
+    font-size: 12px;
+  }
+}

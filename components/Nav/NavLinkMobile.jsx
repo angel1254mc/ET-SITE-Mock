@@ -12,7 +12,7 @@ function NavLinkMobile({props = {}, className}) {
     const name = props.name ? props.name : "default";
     const href = props.href ? props.href : "/";
     const hasDropdown = props.dropdown && props.dropdown.length > 0 ? true : false;
-    const dropdownElements = props.dropdown;
+    const dropdownElements = hasDropdown ? props.dropdown : [];
   return (
     <div id="link-wrapper">
         <div className={" transition-colors border-b-2 px-6 py-3 w-full flex hover:text-blue-400 " + className} onClick= {() => {toggleDropdown(!toggle)}}>{props.name}</div>
